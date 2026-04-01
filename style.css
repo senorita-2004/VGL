@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid #ff4655;
 }
 
 .logo {
@@ -68,7 +70,8 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* HERO */
+/* HERO — unchanged */
+
 .hero {
     text-align: center;
     padding: 120px 20px;
@@ -99,9 +102,12 @@ nav ul li a:hover {
 }
 
 /* GAMES */
+
 .games {
     padding: 60px 20px;
     text-align: center;
+    background: #121225;
+    border-top: 2px solid #222;
 }
 
 .game-container {
@@ -129,10 +135,11 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-/* Updated game-info div */
+/* GAME INFO DROPDOWN */
+
 .game-info {
     display: none;
-    background: #252550; /* changed from bland #222 */
+    background: #252550;
     padding: 15px;
     margin-top: 10px;
     border-radius: 8px;
@@ -141,20 +148,24 @@ nav ul li a:hover {
     color: #f0f0f0;
     font-size: 14px;
     line-height: 1.5;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
 /* ABOUT */
+
 .about {
     padding: 60px 20px;
     text-align: center;
     background: #14142b;
+    border-top: 2px solid #222;
 }
 
 /* FAQ */
+
 .faq {
     padding: 60px 20px;
     text-align: center;
+    background: #121225;
+    border-top: 2px solid #222;
 }
 
 .faq-item {
@@ -181,14 +192,118 @@ nav ul li a:hover {
     padding: 15px;
 }
 
-/* FOOTER */
-footer {
+/* PRIZE POOL + COUNTDOWN */
+
+.event-info {
+    padding: 60px 20px;
+    text-align: center;
+    background: #181830;
+    border-top: 2px solid #222;   /* softer divider, matches other sections */
+}
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* PRIZE SIDE */
+
+.prize-side {
+    text-align: center;
+}
+
+.prize-card {
+    background: #1a1a40;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff4655;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.prize-card:hover {
+    transform: scale(1.05);
+}
+
+/* COUNTDOWN */
+
+.countdown-side {
+    text-align: center;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.time-box {
+    background: #1a1a40;
+    padding: 15px;
+    border-radius: 10px;
+    width: 90px;
+    border: 2px solid #ff4655;
+}
+
+.time-box span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4655;
+}
+
+.time-box p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* REGISTER */
+
+#register {
     background: #14142b;
+    border-top: 2px solid #222;
+    margin-bottom: 40px;
+}
+
+/* REGISTRATION FORM */
+
+#registrationForm input,
+#registrationForm select {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+#registrationForm button {
+    padding: 10px 20px;
+    background: #ff4655;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#registrationForm button:hover {
+    background: #ff2e3e;
+}
+
+/* FOOTER — clearly separated */
+
+footer {
+    background: #0d0d1f;
+    border-top: 3px solid #ff4655;
     padding: 40px;
     text-align: center;
 }
 
 /* REVEAL ANIMATION */
+
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -201,6 +316,7 @@ footer {
 }
 
 /* MOBILE */
+
 @media (max-width: 768px) {
 
     nav {
@@ -232,26 +348,4 @@ footer {
     .logo-text h1 {
         font-size: 22px;
     }
-}
-
-/* REGISTRATION FORM */
-#registrationForm input,
-#registrationForm select {
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
-    border: none;
-}
-
-#registrationForm button {
-    padding: 10px 20px;
-    background: #ff4655;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#registrationForm button:hover {
-    background: #ff2e3e;
 }
