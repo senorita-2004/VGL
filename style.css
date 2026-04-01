@@ -69,7 +69,7 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* HERO*/
+/* HERO */
 
 .hero {
     text-align: center;
@@ -197,7 +197,7 @@ nav ul li a:hover {
     padding: 60px 20px;
     text-align: center;
     background: #181830;
-    border-top: 2px solid #222;   /* softer divider, matches other sections */
+    border-top: 2px solid #222;
 }
 
 .event-container {
