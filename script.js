@@ -43,12 +43,15 @@ const gameCards = document.querySelectorAll(".game-card");
 
 gameCards.forEach(card => {
     card.addEventListener("click", function () {
+
         const info = card.querySelector(".game-info");
+
         if (info.style.display === "block") {
             info.style.display = "none";
         } else {
             info.style.display = "block";
         }
+
     });
 });
 
@@ -57,3 +60,46 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     e.preventDefault();
     alert("Registration successful! We will contact you soon.");
 });
+
+// Countdown Timer
+
+const eventDate = new Date("September 25, 2026 09:00:00").getTime();
+
+const timerFunction = setInterval(function () {
+
+    const now = new Date().getTime();
+
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        / 1000
+    );
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    if (distance < 0) {
+
+        clearInterval(timerFunction);
+
+        document.getElementById("countdown").innerHTML =
+            "<h2>The Event Has Started!</h2>";
+
+    }
+
+}, 1000);
