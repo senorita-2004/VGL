@@ -58,7 +58,7 @@ gameCards.forEach(card => {
 // Registration form submit
 document.getElementById("registrationForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    alert("Registration successful! We will contact you soon.");
+    alert("Registration successful! We will contact you soon. Complete the payment in https://vtop.vit.ac.in");
 });
 
 // Countdown Timer
@@ -95,11 +95,11 @@ const timerFunction = setInterval(function () {
 
     if (distance < 0) {
 
-        clearInterval(timerFunction);
+    clearInterval(timerFunction);
 
-        document.getElementById("countdown").innerHTML =
-            "<h2>The Event Has Started!</h2>";
+    document.querySelector(".countdown-side").innerHTML =
+        "<h2>The Event Has Started!</h2>";
 
-    }
+}
 
 }, 1000);
